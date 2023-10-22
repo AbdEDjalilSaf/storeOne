@@ -20,17 +20,20 @@ let reducer = (state = inialesState,action)=>{
     ...state,
     numOfCakes:state.numOfCakes - 1
   }
-  default:return state
+  // default:
+  //   return state
   }
 }
 let store = createStore(reducer)
-
+// console.log("update State", store.getState())
 let unsubscribe = store.subscribe(()=>   console.log("update State", store.getState()))
   // so you are exited
 store.dispatch(cackes())
-store.dispatch(cackes())
+// store.dispatch(cackes())
+// store.dispatch(cackes())
+// unsubscribe()
 
-unsubscribe();
+// unsubscribe();
   return (
     <>
       <p className="read-the-docs">
