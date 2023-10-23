@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import {createStore} from 'redux'
-import {thunkRedux} from 'redux-thunk'
-
+import {applyMiddleware, createStore} from 'redux'
+import thunkRedux from 'redux-thunk'
+import axios from 'axios'
 
 
 // function App() {
@@ -107,6 +107,49 @@ let initialState = {
   users:[],
   error:''
 }
+
+let reducer = ( state = initialState,action)=>{
+switch(action.type){
+case option_To_Introdauct:
+  return{
+    ...state,
+    loading:true
+  }
+  case option_To_Successful:
+  return{
+    loading:false,
+    users:action.pyload,
+    error:''
+  }
+  case option_To_Error:
+  return{
+    loading:false,
+    users:[],
+    error:action.pyload
+  }
+}
+}
+
+let fitchUser = ()=>{
+  return async function(dispatch){
+    dispatch(option_To_Introdauct())
+    try {
+let response = await axios.get('https://jsonplaceholder.typicode.com/photos');
+let products = await response.data
+products.map((user)=> console.log(user.title))
+dispatch(option_To_Successful);
+console.log(response.data);
+    }catch(err){
+dispatch(option_To_Error(err.message));
+console.log(err.message);
+    }
+  }
+}
+
+let store = createStore(reducer,applyMiddleware(thunkRedux))
+// store.subscribe(()=>{ console.log("state now",store.getState())})
+
+store.dispatch(fitchUser())
 
 return (
 <p className="read-the-docs">
