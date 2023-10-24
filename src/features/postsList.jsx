@@ -1,8 +1,9 @@
 import {useSelector} from "@reduxjs/toolkit"
+import {sellectAllPosts} from "./postSlice"
 
 let postsList = ()=>{
 
-    let posts = useSelector(state=> state.posts)
+    let posts = useSelector(sellectAllPosts)
 let renderPosts = posts.map(post =>{
     <article key = {post.key}>
     <h2>{post.title}</h2>
@@ -10,12 +11,19 @@ let renderPosts = posts.map(post =>{
     </article>
 })
 
-return {
+return (
+   
+    <div>
+        <h3>posts</h3>
+        {renderPosts}
+    </div>
+
+)
 
 
 
 
-}
+
 
 
 
