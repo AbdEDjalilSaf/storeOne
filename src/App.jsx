@@ -3,7 +3,7 @@ import './App.css'
 import {applyMiddleware, createStore} from 'redux'
 import thunkRedux from 'redux-thunk'
 import axios from 'axios'
-
+import {configureStore} from "@reduxjs/toolkit"
 
 // function App() {
 
