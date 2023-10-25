@@ -9,6 +9,7 @@ reducer:{
 }
 })
 
+export default store
 
 
 

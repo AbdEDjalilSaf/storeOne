@@ -178,9 +178,15 @@ import {postsList} from "./features/postsList"
 
 
 let App = ()=>{
+  <>
 
+
+  
+<h2>Hello Peaple</h2>
 <postsList />
 
+
+</>
 
 
 

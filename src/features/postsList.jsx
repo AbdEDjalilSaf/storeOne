@@ -1,4 +1,4 @@
-import {useSelector} from "@reduxjs/toolkit"
+import {useSelectorq} from "redux"
 import {sellectAllPosts} from "./postSlice"
 
 let postsList = ()=>{
