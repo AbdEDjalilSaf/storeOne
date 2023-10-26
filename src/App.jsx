@@ -1,5 +1,5 @@
 import './App.css'
-import  Navbar from "./features/postList.jsx"
+import  Navbar from "./features/Navbar"
 // import {applyMiddleware, createStore} from 'redux'
 // import thunkRedux from 'redux-thunk'
 // import axios from 'axios'
@@ -188,14 +188,15 @@ import  Navbar from "./features/postList.jsx"
 
 
 
-function App() {
+function App(){
+  <main>
   <div className='bg-red-500'>
 
 <h2>Hello Peaple</h2>
 <Navbar />
 <h2>Hello Peaple</h2>
 </div>
-
+</main>
 
 
 }
