@@ -1,18 +1,21 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './PostSlice';
+import { useSelector } from 'react-redux';
 
-function Counter() {
-  const counter = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+const Navbar = () => {
+  const { amount } = useSelector((state) => state.cart);
 
   return (
-    <div>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <span>{counter}</span>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
-    </div>
+    <nav>
+      <div className='nav-center'>
+        <h3>redux toolkit</h3>
+        <div className='nav-container'>
+          <CartIcon />
+          <div className='amount-container'>
+            <p className='total-amount'>{amount}</p>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-}
-
-export default Counter;
+};
+export default Navbar;
