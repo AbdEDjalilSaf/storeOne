@@ -1,10 +1,17 @@
-import { useState } from 'react'
 import './App.css'
-import {applyMiddleware, createStore} from 'redux'
-import thunkRedux from 'redux-thunk'
-import axios from 'axios'
-import {configureStore} from "@reduxjs/toolkit"
-import {postsList} from "./features/postsList"
+import  Navbar from "./features/postList.jsx"
+// import {applyMiddleware, createStore} from 'redux'
+// import thunkRedux from 'redux-thunk'
+// import axios from 'axios'
+// import {configureStore} from "@reduxjs/toolkit"
+
+
+
+
+
+
+
+// import {PostsList} from "./features/PostsList"
 // // function App() {
 
 // // let BUY_Cockes='BUY_Cockes';
@@ -177,16 +184,13 @@ import {postsList} from "./features/postsList"
 
 
 
-let App = ()=>{
-  <>
+function App() {
+  <div >
 
-
-  
 <h2>Hello Peaple</h2>
-<postsList />
+<Navbar />
 
-
-</>
+</div>
 
 
 

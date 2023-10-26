@@ -12,7 +12,6 @@ reducers:{}
 
 })
 
-export const sellectAllPosts = state => state.posts
 
 export default postSlice.reducer
 

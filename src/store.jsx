@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { configureStore } from "@reduxjs/toolkit";
-import {postsReducer} from "./features/postSlice"
-
+import { postsList } from "./features/PostSlice";
 let store = configureStore({
 reducer:{
-   post:postsReducer
+   post:postsList,
    
-}
+},
 })
 
 export default store
