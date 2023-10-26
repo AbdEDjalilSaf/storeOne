@@ -1,27 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-let inialiState = [
-    {id:"1",title:"learn Redux ",content:"I've hard good things"},
-    {id:"2",title:"Slice...",content:"I more say slicein all project"}
-]
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+  },
+});
 
-let postSlice = createSlice({
-name:"posts",
-inialiState,
-reducers:{}
-
-})
-
-
-export default postSlice.reducer
-
-
-
-
-
-
-
-
-
-
-
+export const { increment, decrement } = counterSlice.actions;
+export default counterSlice.reducer;

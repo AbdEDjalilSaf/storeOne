@@ -1,22 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { postsList } from "./features/PostSlice";
-let store = configureStore({
-reducer:{
-   post:postsList,
-   
-},
-})
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from './features/PostSlice';
 
-export default store
+const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+    // Add other slices here if needed.
+  },
+});
 
-
-
-
-
-
-
-
-
-
-
-
+export default store;
