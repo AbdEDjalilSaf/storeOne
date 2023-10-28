@@ -4,7 +4,7 @@ const counterSlice = createSlice({
  name: "counter",
 initialState: {  
   cartItems: [],
-  amount: 0,
+  amount: 5,
   total: 0,
   isLoading: true,
  },
