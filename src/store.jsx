@@ -4,7 +4,6 @@ import counterReducer from './features/PostSlice';
 const store = configureStore({
   reducer: {
     cart:counterReducer
-
   },
 });
 

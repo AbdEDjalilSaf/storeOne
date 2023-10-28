@@ -2,15 +2,15 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  const { post } = useSelector((state) => state.cart);
+  const  amount  = useSelector((store) => store.cart.amount);
 
   return (
     <nav>
-      <div className='nav-center'>
+      <div className='nav-center text-black'>
         <h3>redux toolkit</h3>
         <div className='nav-container'>
           <div className='amount-container'>
-            <p className='total-amount'>{post}</p>
+            <p className='total-amount'>{amount}</p>
           </div>
         </div>
       </div>

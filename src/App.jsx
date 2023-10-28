@@ -189,14 +189,17 @@ import  Navbar from "./features/Navbar"
 
 
 function App(){
-  <main>
-  <div className='bg-red-500'>
 
-<h2>Hello Peaple</h2>
-<Navbar />
-<h2>Hello Peaple</h2>
-</div>
-</main> 
+
+  return (
+  <main>
+    <div className='bg-green-500 py-5 text-lg'>
+  <Navbar />
+  
+  </div>
+  </main>
+  
+  )
 
 
 }
