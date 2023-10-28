@@ -196,7 +196,7 @@ function App(){
 <Navbar />
 <h2>Hello Peaple</h2>
 </div>
-</main>
+</main> 
 
 
 }
