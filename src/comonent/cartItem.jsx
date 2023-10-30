@@ -1,12 +1,12 @@
 import React from "react";
 
-function cartItem(){
+function cartItem({title,desc}){
 
 return (
 <div className="app">
-<div>
-<h2>Hello Product</h2>
-<h3>Welcome</h3>
+<div className="flex justify-around">
+<h2>{title}</h2>
+<h3>{desc}</h3>
 </div>    
 </div>
 

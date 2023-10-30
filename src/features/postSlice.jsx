@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
- name: "counter",
+ name: "cart",
   initialState: {  
   cartItems: [
     {id:"one",title:"there's begin",desc:"more spesifice program"},
@@ -11,7 +11,12 @@ const counterSlice = createSlice({
   total: 0,
   isLoading: true,
  },
-reducers:{},
-});
+reducers:{
 
+  clearCart: (state)=>{
+    state.cartItems = [];
+  }
+},
+});
+export const {clearCart} = counterSlice.actions;
 export default counterSlice.reducer;
