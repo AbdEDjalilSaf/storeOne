@@ -1,5 +1,6 @@
 import './App.css'
 import  Navbar from "./features/Navbar"
+import Cartcontainer  from './comonent/Cartcontainer'
 // import {applyMiddleware, createStore} from 'redux'
 // import thunkRedux from 'redux-thunk'
 // import axios from 'axios'
@@ -195,7 +196,7 @@ function App(){
   <main>
     <div className='bg-green-500 py-5 text-lg'>
   <Navbar />
-  
+  <Cartcontainer />
   </div>
   </main>
   
