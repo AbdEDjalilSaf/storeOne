@@ -4,12 +4,9 @@ function cartItem(){
 
 return (
 <div className="app">
-
-<h2>Hello Product</h2>
-
 <div>
+<h2>Hello Product</h2>
 <h3>Welcome</h3>
-
 </div>    
 </div>
 

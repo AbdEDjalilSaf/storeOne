@@ -1,5 +1,5 @@
 import React from "react"
-import cartItem from './cartItem'
+import CartItem from './CartItem'
 import { useSelector } from "react-redux"
 
 function Cartcontainer(){
@@ -15,14 +15,28 @@ if(amount < 1){
     </>
     )
 }
-<header>
-<h2>Title</h2>
-</header>
-{cartItem.map((item)=>{
-    return <cartItem key={item.id} {...item} />
 
-})
-}
+
+return(
+
+    <section>
+        <div>
+{cartItems.map((item)=>{
+return   <CartItem  key={item.id}  {...item}/>
+})}
+
+    </div>
+    <footer className="px-20">
+        <hr />
+        <div>
+            <h2>
+                {total}
+            </h2>
+        </div>
+    </footer>
+    </section>
+)
+
 
 
 
