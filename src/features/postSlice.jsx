@@ -12,10 +12,13 @@ const counterSlice = createSlice({
   isLoading: true,
  },
 reducers:{
-
   clearCart: (state)=>{
     state.cartItems = [];
-  }
+  },
+  removeItem:  (state,action)=>{
+    const itemID = action.payload;
+    state.cartItems = state.cartItems.filter((item)=> item.id !== itemID);
+ 
 },
 });
 

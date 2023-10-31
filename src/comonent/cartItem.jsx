@@ -7,6 +7,7 @@ return (
 <div className="flex justify-around">
 <h2>{title}</h2>
 <h3>{desc}</h3>
+<button>remove</button>
 </div>    
 </div>
 
