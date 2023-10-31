@@ -4,8 +4,8 @@ const counterSlice = createSlice({
  name: "cart",
   initialState: {  
   cartItems: [
-    {id:"one",title:"there's begin",desc:"more spesifice program"},
-    {id:"two",title:"there's be end",desc:"more succesful projects"}
+    {id:"one",title:"there's begin",desc:"more spesifice program",amount:1},
+    {id:"two",title:"there's be end",desc:"more succesful projects",amount:1}
   ],
   amount: 1,
   total: 0,
@@ -18,5 +18,14 @@ reducers:{
   }
 },
 });
+
+const Action_To_Item = "ACTION_To_Item";
+const actionItem = (payload)=>{
+ return {
+  type:Action_To_Item,
+  payload:payload
+ }
+}
+
 export const {clearCart} = counterSlice.actions;
 export default counterSlice.reducer;
