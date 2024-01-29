@@ -1,7 +1,8 @@
 import React from "react"
 import CartItem from './CartItem'
 import { useSelector,useDispatch } from "react-redux"
-import {clearCart} from '../features/PostSlice'
+import {clearCart} from "../features/PostSlice"
+
 function Cartcontainer(){
 const dispatch = useDispatch();
 const {amount,total,cartItems} = useSelector((store)=> store.cart);

@@ -15,11 +15,11 @@ reducers:{
   clearCart: (state)=>{
     state.cartItems = [];
   },
-  removeItem:  (state,action)=>{
+  removeItem: (state,action)=>{
     const itemID = action.payload;
-    state.cartItems = state.cartItems.filter((item)=> item.id !== itemID);
- 
-},
+    state.cartItems = state.cartItems.filter((item)=> item.id != itemID);
+}
+}
 });
 
 const Action_To_Item = "ACTION_To_Item";
@@ -31,4 +31,5 @@ const actionItem = (payload)=>{
 }
 
 export const {clearCart} = counterSlice.actions;
+export const {removeItem} = counterSlice.actions;
 export default counterSlice.reducer;
