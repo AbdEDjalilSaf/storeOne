@@ -194,7 +194,7 @@ function App(){
 
   return (
   <main>
-    <div className='bg-gray-400 py-5 text-lg'>
+    <div className='bg-gray-300 py-5 text-lg'>
   {/* <Navbar /> */}
   <Cartcontainer />
   </div>
