@@ -6,7 +6,7 @@ const  amount  = useSelector((store) => store.cart.amount);
 
   return (
     <nav>
-      <div className='nav-center text-black'>
+      <div className='nav-center flex justify-evenly gap-8 text-black'>
         <h3>redux toolkit</h3>
         <div className='nav-container'>
           <div className='amount-container'>
